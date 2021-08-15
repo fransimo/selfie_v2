@@ -1,0 +1,153 @@
+    1  ping google.es
+    2  sudo reboot
+    3  sudo poweroff 
+    4  ipconfig
+    5  ifconfig
+    6  ls
+    7  sudo poweroff 
+    8  git clone https://github.com/goodtft/LCD-show.git
+    9  chmod -R 755 LCD-show
+   10  cd LCD-show/
+   11  sudo ./LCD35-show
+   12  chromium-browser 
+   13  sudo joe /etc/xdg/lxsession/LXDE-pi/autostart
+   14  sudp apt-get install joe
+   15  sudo apt-get install joe
+   16  sudo joe /etc/xdg/lxsession/LXDE-pi/autostart
+   17  mkdir @/home/pi/functionfest/run.sh
+   18  #@xscreensaver -no-splash
+   19  sudo joe /etc/xdg/lxsession/LXDE-pi/autostart
+   20  mkdir selfie_v2
+   21  cd selfie_v2/
+   22  joe run.sh
+   23  chmod a+x run.sh 
+   24  sudo reboot 
+   25  cd selfie_v2/
+   26  joe run.sh 
+   27  sudo poweroff 
+   28  killall vlc
+   29  cd selfie_v2/
+   30  joe run.sh
+   31  whereis chromium-browser 
+   32  joe run.sh
+   33  ls
+   34  joe run.sh
+   35  sudo poweroff 
+   36  cd selfie_v2/
+   37  pwd
+   38  joe run.sh
+   39  sudo reboot 
+   40  killall chromium-browser 
+   41  ps ax
+   42  killall /usr/lib/chromium-browser/chromium-browser-v7
+   43  cd selfie_v2/
+   44  joe run.sh
+   45  cd
+   46  cd LCD-show/
+   47  sudo ./rotate.sh 90
+   48  cd LCD-show/
+   49  sudo ./rotate.sh 0
+   50  cd selfie_v2/
+   51  joe run.sh
+   52  cd ../LCD-show/
+   53  sudo ./rotate.sh 90
+   54  cd selfie_v2/
+   55  joe run.sh
+   56  sudo joe /etc/xdg/lxsession/LXDE-pi/autostart
+   57  sudo reboot 
+   58  joe selfie_v2/run.sh
+   59  sudo reboot 
+   60  joe selfie_v2/run.sh
+   61  sudo reboot
+   62  sudo apt-get install imagemagick
+   63  man animate
+   64  whereis animate
+   65  joe selfie_v2/run.sh
+   66  sudo rebot
+   67  sudo reboot 
+   68  cd selfie_v2/
+   69  cat run.sh
+   70  animate selfie_v2/2016_05_27_t2_fl2d_cor.gif
+   71  animate 2016_05_27_t2_fl2d_cor.gif
+   72  man animate
+   73  sudo joe /etc/xdg/lxsession/LXDE-pi/autostart
+   74  sudo reboot 
+   75  joe selfie_v2/run.sh
+   76  sudo reboot 
+   77  cd selfie_v2/
+   78  cat run.sh
+   79  joe selfie.html
+   80  wget https://raw.githubusercontent.com/timothyreese/the-gift/master/GIF/gif_player.html
+   81  cat gif_player.html 
+   82  wget https://raw.githubusercontent.com/timothyreese/the-gift/master/GIF/jquery-2.1.1.min.js
+   83  joe gif_player.html 
+   84  joe run.sh
+   85  raspi-config 
+   86  sudo raspi-config 
+   87  sudo joe /etc/xdg/lxsession/LXDE-pi/autostart
+   88  joe selfie_v2/run.sh
+   89  cd
+   90  cd LCD-show/
+   91  sudo ./rotate.sh 0
+   92  cd selfie_v2/
+   93  mkdir originals
+   94  mv *.mp4 originals/
+   95  mv originals originals_mp4
+   96  mkdir originals_gif
+   97  mv *.gif originals_gif/
+   98  cp originals_gif/2016_05_27_t2_fl2d_cor.gif .
+   99  mv 2016_05_27_t2_fl2d_cor.gif 0_2016_05_27_t2_fl2d_cor.gif 
+  100  onvert -background none -rotate 90 0_2016_05_27_t2_fl2d_cor.gif 2016_05_27_t2_fl2d_cor.gif 
+  101  convert -background none -rotate 90 0_2016_05_27_t2_fl2d_cor.gif 2016_05_27_t2_fl2d_cor.gif 
+  102  sudo reboot 
+  103  cd selfie_v2/
+  104  cat run.sh
+  105  convert -background none -rotate 90 -coalesce 0_2016_05_27_t2_fl2d_cor.gif 2016_05_27_t2_fl2d_cor.gif 
+  106  joe run.sh
+  107  identify -verbose 2016_05_27_t2_fl2d_cor.gif | grep Delay
+  108  joe run.sh
+  109  convert -background none -rotate 90 -coalesce -delay 10x100  0_2016_05_27_t2_fl2d_cor.gif 2016_05_27_t2_fl2d_cor.gif 
+  110  sudo reboot 
+  111  sudo poweroff 
+  112  htop
+  113  history 
+  114  killall /usr/lib/chromium-browser/chromium-browser-v7
+  115  htop
+  116  sudo apt-get update
+  117  whereis dillo
+  118  joe selfie_v2/run.sh
+  119  dillo --help
+  120  joe selfie_v2/run.sh
+  121  sudo reboot 
+  122  joe selfie_v2/run.sh
+  123  ls
+  124  htop
+  125  mv selfie_v2/ selfie_v2_original
+  126  git clone git@github.com:fransimo/selfie_v2.git
+  127  ls .ssh
+  128  ls
+  129  mv id_rsa* .ssh/
+  130  cd .ssh/
+  131  ls
+  132  ls -lah
+  133  cd 
+  134  git clone git@github.com:fransimo/selfie_v2.git
+  135  exit
+  136  mc
+  137  sudo apt-get install mc
+  138  htop
+  139  mc
+  140  cd selfie_v2/
+  141  ls
+  142  rm *~
+  143  ls
+  144  git add *
+  145  git status
+  146  git commit -m "initial proyect commit"
+  147  git config --global user.name "Fran Simó"
+  148  git config --global user.email fransimo@gmail.com
+  149  git config --global push.default simple
+  150  git commit -m "initial proyect commit"
+  151  git push
+  152  history 
+  153  history > history.txt
