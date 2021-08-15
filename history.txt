@@ -1,19 +1,34 @@
 # Hardware install
 
+
+http://www.lcdwiki.com/3.5inch_RPi_Display
+320×480 resolution
+
 git clone https://github.com/goodtft/LCD-show.git
 chmod -R 755 LCD-show
 cd LCD-show/
 sudo ./LCD35-show
 
+## Hide cursor
+https://2021.jackbarber.co.uk/blog/2017-02-16-hide-raspberry-pi-mouse-cursor-in-raspbian-kiosk
+https://www.raspberrypi.org/forums/viewtopic.php?t=234879
+
+sudo apt-get install unclutter
+
 ## Increase video memory
 
 sudo raspi-config
 
-or 
+or
 
 sudo nano /boot/config.txt
 change:
  gpu_mem=256
+
+Also changed GL Driver r to experimental
+
+A possible way to go back
+https://raspberrypi.stackexchange.com/questions/47180/editing-the-settings-that-are-available-through-raspi-config-without-using-raspi
 
 
 ## Optional
@@ -25,6 +40,8 @@ sudo apt-get install -y rpi-chromium-mods
 sudo apt-get install -y python-sense-emu python3-sense-emu
 
 ## Helpers
+
+export DISPLAY=:0
 
 sudp apt-get install joe mc
 
@@ -53,16 +70,16 @@ sudo ln -s /home/pi/selfie_v2/autostart /etc/xdg/lxsession/LXDE-pi/autostart
    64  whereis animate
    65  joe selfie_v2/run.sh
    66  sudo rebot
-   67  sudo reboot 
+   67  sudo reboot
    68  cd selfie_v2/
    69  cat run.sh
    70  animate selfie_v2/2016_05_27_t2_fl2d_cor.gif
    71  animate 2016_05_27_t2_fl2d_cor.gif
    72  man animate
    73  sudo joe /etc/xdg/lxsession/LXDE-pi/autostart
-   74  sudo reboot 
+   74  sudo reboot
    75  joe selfie_v2/run.sh
-   76  sudo reboot 
+   76  sudo reboot
    77  cd selfie_v2/
    78  cat run.sh
 
@@ -70,29 +87,18 @@ sudo ln -s /home/pi/selfie_v2/autostart /etc/xdg/lxsession/LXDE-pi/autostart
 
    79  joe selfie.html
    80  wget https://raw.githubusercontent.com/timothyreese/the-gift/master/GIF/gif_player.html
-   81  cat gif_player.html 
+   81  cat gif_player.html
    82  wget https://raw.githubusercontent.com/timothyreese/the-gift/master/GIF/jquery-2.1.1.min.js
-   83  joe gif_player.html 
+   83  joe gif_player.html
    84  joe run.sh
 
 
 
-  100  onvert -background none -rotate 90 0_2016_05_27_t2_fl2d_cor.gif 2016_05_27_t2_fl2d_cor.gif 
-  101  convert -background none -rotate 90 0_2016_05_27_t2_fl2d_cor.gif 2016_05_27_t2_fl2d_cor.gif 
-  102  sudo reboot 
-  103  cd selfie_v2/
-  104  cat run.sh
-  105  convert -background none -rotate 90 -coalesce 0_2016_05_27_t2_fl2d_cor.gif 2016_05_27_t2_fl2d_cor.gif 
-  106  joe run.sh
+
   107  identify -verbose 2016_05_27_t2_fl2d_cor.gif | grep Delay
   108  joe run.sh
-  109  convert -background none -rotate 90 -coalesce -delay 10x100  0_2016_05_27_t2_fl2d_cor.gif 2016_05_27_t2_fl2d_cor.gif 
-  110  sudo reboot 
-  111  sudo poweroff 
-  112  htop
-  113  history 
-  114  killall /usr/lib/chromium-browser/chromium-browser-v7
-  115  htop
+  109  convert -background none -rotate 90 -coalesce -delay 10x100  0_2016_05_27_t2_fl2d_cor.gif 2016_05_27_t2_fl2d_cor.gif
 
-  134  git clone git@github.com:fransimo/selfie_v2.git
- 
+
+
+  ffmpeg -f concat -i concat.txt -c copy output.mp4
