@@ -12,7 +12,7 @@
 
 # /usr/bin/chromium-browser --noerrdialogs --kiosk file:///home/pi/selfie_v2/output.mp4
 
-/usr/bin/chromium-browser --noerrdialogs --kiosk file:///home/pi/selfie_v2/video.html
+# /usr/bin/chromium-browser --noerrdialogs --kiosk file:///home/pi/selfie_v2/video.html
 
 
 # https://learn.adafruit.com/raspi-animated-gif-picture-frame?view=all
