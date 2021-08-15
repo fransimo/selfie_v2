@@ -4,6 +4,6 @@
 @xset -dpms 
 @xset s noblank
 @/home/pi/selfie_v2/run.sh
-#@xscreensaver -no-splash
+@xscreensaver -no-splash
 point-rpi
 
