@@ -99,6 +99,7 @@ sudo ln -s /home/pi/selfie_v2/autostart /etc/xdg/lxsession/LXDE-pi/autostart
   108  joe run.sh
   109  convert -background none -rotate 90 -coalesce -delay 10x100  0_2016_05_27_t2_fl2d_cor.gif 2016_05_27_t2_fl2d_cor.gif
 
+convert -background none -rotate 90 -resize 480x257 -delay 5x100  0_2016_05_27_t2_fl2d_cor.gif 2016_05_27_t2_fl2d_cor.gif
 
 
   ffmpeg -f concat -i concat.txt -c copy output.mp4
