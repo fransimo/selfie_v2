@@ -5,6 +5,15 @@ chmod -R 755 LCD-show
 cd LCD-show/
 sudo ./LCD35-show
 
+## Optional
+
+sudo apt-get update
+sudo apt-get dist-upgrade
+
+sudo apt-get install -y rpi-chromium-mods
+sudo apt-get install -y python-sense-emu python3-sense-emu
+
+
 # Kiosk
 sudo rm /etc/xdg/lxsession/LXDE-pi/autostart
 sudo ln -s /home/pi/selfie_v2/autostart /etc/xdg/lxsession/LXDE-pi/autostart

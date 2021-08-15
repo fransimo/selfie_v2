@@ -16,7 +16,7 @@
 
 #  convert -background none -rotate 90 -coalesce -delay 10x100  0_2016_05_27_t2_fl2d_cor.gif 2016_05_27_t2_fl2d_cor.gif 
 # https://lifehacker.com/how-to-play-zooms-new-built-in-games-instead-of-working-1847457051
-# /usr/bin/chromium-browser --noerrdialogs --kiosk file:///home/pi/selfie_v2/2016_05_27_t2_fl2d_cor.gif
+/usr/bin/chromium-browser --noerrdialogs --kiosk file:///home/pi/selfie_v2/2016_05_27_t2_fl2d_cor.gif
 
 # nu funciona /usr/bin/dillo -f file:///home/pi/selfie_v2/2016_05_27_t2_fl2d_cor.gif
 
