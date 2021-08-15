@@ -1,0 +1,9 @@
+@lxpanel --profile LXDE-pi
+@pcmanfm --desktop --profile LXDE-pi
+@xset s off
+@xset -dpms 
+@xset s noblank
+@/home/pi/selfie_v2/run.sh
+#@xscreensaver -no-splash
+point-rpi
+

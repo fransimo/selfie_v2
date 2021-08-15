@@ -1,16 +1,14 @@
-    1  ping google.es
-    2  sudo reboot
-    3  sudo poweroff 
-    4  ipconfig
-    5  ifconfig
-    6  ls
-    7  sudo poweroff 
-    8  git clone https://github.com/goodtft/LCD-show.git
-    9  chmod -R 755 LCD-show
-   10  cd LCD-show/
-   11  sudo ./LCD35-show
-   12  chromium-browser 
-   13  sudo joe /etc/xdg/lxsession/LXDE-pi/autostart
+# Hardware install
+
+git clone https://github.com/goodtft/LCD-show.git
+chmod -R 755 LCD-show
+cd LCD-show/
+sudo ./LCD35-show
+
+# Kiosk
+sudo rm /etc/xdg/lxsession/LXDE-pi/autostart
+sudo ln -s /home/pi/selfie_v2/autostart /etc/xdg/lxsession/LXDE-pi/autostart
+
    14  sudp apt-get install joe
    15  sudo apt-get install joe
    16  sudo joe /etc/xdg/lxsession/LXDE-pi/autostart
