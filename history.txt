@@ -102,4 +102,11 @@ sudo ln -s /home/pi/selfie_v2/autostart /etc/xdg/lxsession/LXDE-pi/autostart
 convert -background none -rotate 90 -resize 480x257 -delay 5x100  0_2016_05_27_t2_fl2d_cor.gif 2016_05_27_t2_fl2d_cor.gif
 
 
+# 3
+ 456  convert -background none -rotate 90 -resize 480x257 -delay 4x100  0_2016_05_27_t2_fl2d_cor.gif 1_2016_05_27_t2_fl2d_cor.gif
+  457  animate 0_2016_05_27_t2_fl2d_cor.gif 
+  458  animate 1_2016_05_27_t2_fl2d_cor.gif 
+  459  gifsicle --colors 64 -i 1_2016_05_27_t2_fl2d_cor.gif  -O3 -o 2016_05_27_t2_fl2d_cor.gif 
+
+# concat several .mp4 to another 
   ffmpeg -f concat -i concat.txt -c copy output.mp4
