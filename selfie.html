@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <script>
+      function fun(v) {
+        window.localStorage.setItem('selfie_id', v);
+      };
+
+      window.onload = function() {
+        var v = window.localStorage.getItem('selfie_id');
+        //alert("Value: " + v);
+        document.getElementById("lname").value = v;
+      };
+    </script>
+
+  </head>
+  <body>
+    <div>
+      <p id="pre">Hola</p>
+      <input type="text" id="lname" name="lname" value="Doe">
+    </div>
+    <div>
+      <button onclick = "fun(1)">1</button>
+      <button onclick = "fun(2)">2</button>
+      <button onclick = "fun(3)">3</button>
+      <button onclick = "fun(4)">4</button>
+    </div>
+  </body>
+</html>
