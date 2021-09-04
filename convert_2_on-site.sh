@@ -1,10 +1,11 @@
 #!/bin/bash
 export SOURCE="originals_gif"
 export DESTINATION="on-site/videos"
-export RESIZE="480x257"
+export RESIZE="480x320"
 export DELAY="5x100"
 
 convert -background none -rotate 270 -resize ${RESIZE} -delay ${DELAY} ${SOURCE}/2016_05_27_t2_fl2d_cor.gif ${DESTINATION}/01_00_2016_05_27_t2_fl2d_cor.gif
+#gifsicle --colors 64 -i 1_2016_05_27_t2_fl2d_cor.gif  -O3 -o 2016_05_27_t2_fl2d_cor.gif
 
 convert -background none -rotate 270 -resize ${RESIZE} -delay ${DELAY} ${SOURCE}/2016_05_27_pd_t2_tse_tra.gif ${DESTINATION}/01_01_2016_05_27_pd_t2_tse_tra.gif
 
