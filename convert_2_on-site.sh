@@ -23,3 +23,16 @@ convert -background none -rotate 270 -resize ${RESIZE} -delay ${DELAY} ${SOURCE}
 convert -background none -rotate 270 -resize ${RESIZE} -delay ${DELAY} ${SOURCE}/2019_07_22_pd_t2_tse_sag.gif ${DESTINATION}/03_01_2019_07_22_pd_t2_tse_sag.gif
 convert -background none -rotate 270 -resize ${RESIZE} -delay ${DELAY} ${SOURCE}/2019_07_22_t1_se_sag_256.gif ${DESTINATION}/03_02_2019_07_22_t1_se_sag_256.gif
 convert -background none -rotate 270 -resize ${RESIZE} -delay ${DELAY} ${SOURCE}/2019_07_22_t2_tse_fs_tra_256.gif ${DESTINATION}/03_03_2019_07_22_t2_tse_fs_tra_256.gif
+
+
+# 04
+convert -background none -rotate 270 -resize ${RESIZE} -delay ${DELAY} ${SOURCE}/2019_08_24_pd_t2_tse_OBL_SAG.gif ${DESTINATION}/04_00_2019_08_24_pd_t2_tse_OBL_SAG.gif
+convert -background none -rotate 270 -resize ${RESIZE} -delay ${DELAY} ${SOURCE}/2019_08_24_pd_tse_cor_256.gif ${DESTINATION}/04_01_2019_08_24_pd_tse_cor_256.gif
+convert -background none -rotate 270 -resize ${RESIZE} -delay ${DELAY} ${SOURCE}/2019_08_24_t1_se_sag_256.gif ${DESTINATION}/04_02_2019_08_24_t1_se_sag_256.gif
+convert -background none -rotate 270 -resize ${RESIZE} -delay ${DELAY} ${SOURCE}/2019_08_24_t2_tse_fs_tra_256.gif ${DESTINATION}/04_03_2019_08_24_t2_tse_fs_tra_256.gif
+
+
+# pending
+# originals_gif/2015_01_30_ecorenal_vesi.gif
+# originals_gif/2019_08_22_ecorenal_vesi.gif
+# originals_gif/2020_10_26_ecorenal_vesi.gif
