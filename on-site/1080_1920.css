@@ -1,0 +1,23 @@
+body, html {
+  height: 100%;
+  display: grid;
+  background: #000;
+  margin: 0;
+}
+
+main {
+  width: 1080px;
+  height: 1920px;
+  background-image: url("images/2020_11_23_columna1_16_9_vertical.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.center-me {
+  margin: auto;
+}
+
+.rinyones {
+  position: absolute;
+  top: 1200px; left: 122px;
+}

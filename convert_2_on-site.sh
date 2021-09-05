@@ -30,7 +30,10 @@ convert -background none -transpose -resize ${RESIZE} -delay ${DELAY} ${SOURCE}/
 convert -background none -rotate 270 -resize ${RESIZE} -delay ${DELAY} ${SOURCE}/2019_08_24_t2_tse_fs_tra_256.gif ${DESTINATION}/04_03_2019_08_24_t2_tse_fs_tra_256.gif
 
 
-# pending
-# originals_gif/2015_01_30_ecorenal_vesi.gif
-# originals_gif/2019_08_22_ecorenal_vesi.gif
-# originals_gif/2020_10_26_ecorenal_vesi.gif
+# 00
+
+convert -background none -resize 835x653 -delay ${DELAY} ${SOURCE}/2015_01_30_ecorenal_vesi.gif ${DESTINATION}/00_00_2015_01_30_ecorenal_vesi.gif
+convert -background none -resize 835x653 -delay ${DELAY} ${SOURCE}/2019_08_22_ecorenal_vesi.gif ${DESTINATION}/00_01_2019_08_22_ecorenal_vesi.gif
+convert -background none -resize 835x653 -delay ${DELAY} ${SOURCE}/2020_10_26_ecorenal_vesi.gif ${DESTINATION}/00_02_2020_10_26_ecorenal_vesi.gif
+
+
