@@ -28,6 +28,22 @@
   </head>
   <body>
     <main>
+      <mirror>
+        <video class="webcam" autoplay></video>
+      </mirror>
+      <script>
+      const constraints = {
+        audio: false,
+        video: true
+      };
+
+      const video = document.querySelector("video");
+
+      navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
+        video.srcObject = stream;
+      });
+      </script>
+      
       <img id="imgDisp" class="rinyones" src="videos/00_00_2015_01_30_ecorenal_vesi.gif" />
     </main>
   </body>
