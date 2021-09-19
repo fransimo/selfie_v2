@@ -34,7 +34,7 @@
       <script>
       const constraints = {
         audio: false,
-        video: true
+        video: {"height":{"exact":240},"width":{"exact":320}}
       };
 
       const video = document.querySelector("video");
@@ -48,3 +48,14 @@
     </main>
   </body>
 </html>
+
+<!--
+Result constraints: {"height":{"exact":1080},"width":{"exact":1920}}
+main.js:97 Result constraints: {"height":{"exact":480},"width":{"exact":640}}
+main.js:124 resize: Actual video dimensions: 640x480px.
+main.js:97 Result constraints: {"height":{"exact":720},"width":{"exact":1280}}
+main.js:124 resize: Actual video dimensions: 1280x720px.
+main.js:97 Result constraints: {"height":{"exact":480},"width":{"exact":640}}
+main.js:124 resize: Actual video dimensions: 640x480px.
+main.js:97 Result constraints: {"height":{"exact":240},"width":{"exact":320}}
+-->
