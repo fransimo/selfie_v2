@@ -5,7 +5,7 @@
 - Activate ssh and camera using rpi-config
 - Increase video memory up to 256G
 - Install basic packages
-  - sudo apt-get install mc joe imagemagick
+  - sudo apt-get install mc joe imagemagick retext
 - If you're on a hidden wifi
   - sudo joe /etc/wpa_supplicant/wpa_supplicant.conf
 - Clone the repo and setup user
