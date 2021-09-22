@@ -1,0 +1,6 @@
+# 1
+ssh pi@selfie-b827eb81d4a2.local 
+
+# 2
+ssh pi@selfie-b827eb45cb8e.local
+
