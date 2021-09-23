@@ -10,10 +10,10 @@ echo $currentname
 
 if [ ! "$newname" == "$currentname" ] ; then
 	echo "Name is different"
-	echo "127.0.1.1	$newname" | sudo tee -a /etc/hosts
+	sudo sed -i "s/${currentname}/${newname}/" /etc/hosts
+	# echo "127.0.1.1	$newname" | sudo tee -a /etc/hosts
 	echo "$newname" | sudo tee /etc/hostname
 	sudo hostname $newname
-	# sudo sed -i "s/${currentname}/${newname}/" /etc/hosts
 else
 	echo "Name is OK"	
 fi
