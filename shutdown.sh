@@ -16,4 +16,4 @@ ssh pi@selfie-b827eb664d68.local "sudo poweroff"
 ssh pi@selfie-b827eb7fe07d.local "sudo poweroff"
 
 # 0
-sudo poweroff
+ssh pi@selfie-e45f015bee2e.local "sudo poweroff"
