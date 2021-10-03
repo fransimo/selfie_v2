@@ -1,5 +1,12 @@
 #!/bin/bash
 
+export command="sudo poweroff"
+
+if [ "$1" != "" ] ; then
+  command=$*
+  echo $command
+fi
+
 # 1
 ssh pi@selfie-b827eb81d4a2.local "sudo poweroff"
 

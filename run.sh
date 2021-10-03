@@ -5,7 +5,7 @@ cd ${HOME}/selfie_v2
 
 # System
 
-git pull
+./update_cron.sh &
 
 ./check-names.sh
 
