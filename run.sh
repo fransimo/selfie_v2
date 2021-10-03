@@ -15,4 +15,4 @@ cd on-site
 
 python3 -m http.server &
 
-/usr/bin/chromium-browser --noerrdialogs --kiosk ${URL}
+/usr/bin/chromium-browser --disk-cache-dir=/dev/null --disk-cache-size=1 --noerrdialogs --kiosk ${URL}
