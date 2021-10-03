@@ -35,7 +35,8 @@ mirror {
 .webcam {
   position: absolute;
   top: 0px; left: -840px;
-  filter: grayscale(1);
+  filter: grayscale(80%) contrast(200%);
+  transform: rotateY(180deg);
   opacity: 0.4;
   height: 100%;
 }
