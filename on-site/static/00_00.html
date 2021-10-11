@@ -39,6 +39,7 @@
           canvas.width = video.videoWidth;
           canvas.height = video.videoHeight;
           canvas.getContext("2d").drawImage(video, 0, 0);
+
           img.src = canvas.toDataURL("image/png");
           //img.style.filter = "grayscale(1) contrast(150%)";
 
@@ -66,7 +67,7 @@
             var data = JSON.stringify({"selfie": imgdata });
             xhr.send(data);
 
-            canvas.remove();
+            //canvas.remove();
           } );
 
           img.src = "";
