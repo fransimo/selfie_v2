@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <title>0.0</title>
     <link href="1080_1920.css" rel="stylesheet">
+    <script src="/static/js/html2canvas.min.js">
+    </script>
+
     <script>
       var timeOutVar;
 
@@ -23,28 +26,59 @@
         changeImage();
       }, 10000);
 
+
+      document.addEventListener('keydown', (event) => {
+        const keyName = event.key;
+
+        if (keyName === 'Enter') {
+
+
+
+          const video = document.querySelector("video");
+
+          const img = document.getElementById("output");
+          const canvas = document.createElement("canvas");
+
+          canvas.width = video.videoWidth;
+          canvas.height = video.videoHeight;
+          canvas.getContext("2d").drawImage(video, 0, 0);
+          // Other browsers will fall back to image/png
+          img.src = canvas.toDataURL("image/webp");
+
+          html2canvas(document.getElementById("capture")).then(canvas => { document.body.appendChild(canvas) } );
+          //img.src = "";
+
+          return;
+        }
+
+      }, false);
+
+
   </script>
 
   </head>
   <body>
-    <main>
+    <main id="capture">
       <mirror>
-        <video class="webcam" autoplay></video>
+        <video class="webcam" autoplay ></video>
+        <img class="webcam" id="output" src="">
       </mirror>
+
       <script>
-      const constraints = {
-        audio: false,
-        video: {"height":{"exact":240},"width":{"exact":320}}
-      };
+        const constraints = {
+          audio: false,
+          video: {"height":{"exact":240},"width":{"exact":320}}
+        };
 
-      const video = document.querySelector("video");
+        const video = document.querySelector("video");
 
-      navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
-        video.srcObject = stream;
-      });
+        navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
+          video.srcObject = stream;
+        });
       </script>
-      
+
       <img id="imgDisp" class="rinyones" src="videos/00_00_2015_01_30_ecorenal_vesi.gif" />
+
     </main>
   </body>
 </html>
