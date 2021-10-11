@@ -31,9 +31,6 @@
         const keyName = event.key;
 
         if (keyName === 'Enter') {
-
-
-
           const video = document.querySelector("video");
 
           const img = document.getElementById("output");
@@ -42,11 +39,10 @@
           canvas.width = video.videoWidth;
           canvas.height = video.videoHeight;
           canvas.getContext("2d").drawImage(video, 0, 0);
-          // Other browsers will fall back to image/png
-          img.src = canvas.toDataURL("image/webp");
+          img.src = canvas.toDataURL("image/png");
 
           html2canvas(document.getElementById("capture")).then(canvas => { document.body.appendChild(canvas) } );
-          //img.src = "";
+          img.src = "";
 
           return;
         }
