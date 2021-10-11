@@ -40,6 +40,9 @@
           canvas.height = video.videoHeight;
           canvas.getContext("2d").drawImage(video, 0, 0);
           img.src = canvas.toDataURL("image/png");
+          //img.style.filter = "grayscale(1) contrast(150%)";
+
+          //setTimeout(function(){}, 10000)
 
           html2canvas(document.getElementById("capture")).then(canvas => {
             document.body.appendChild(canvas)
@@ -52,11 +55,7 @@
             var url = "/upload";
 
             xhr.open("POST", url, true);
-
             xhr.setRequestHeader("Content-Type", "application/json");
-            //xhr.setRequestHeader("Content-Type", "multipart/form-data");
-            //xhr.setRequestHeader('Content-Disposition', 'attachment; filename="selfie"');
-
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4 && xhr.status === 200) {
                     var json = JSON.parse(xhr.responseText);
@@ -65,10 +64,11 @@
             };
 
             var data = JSON.stringify({"selfie": imgdata });
-            // var data = dataImage
             xhr.send(data);
 
+            canvas.remove();
           } );
+
           img.src = "";
 
           return;
@@ -86,9 +86,8 @@
     <main id="capture">
       <mirror>
         <video class="webcam" autoplay ></video>
-        <img class="webcam" id="output" src="">
+        <img class="webcam" id="output" src=""></img>
       </mirror>
-
       <script>
         const constraints = {
           audio: false,
