@@ -26,9 +26,9 @@ main {
 
 .qr {
   position: absolute;
-  top: 1200px; left: 122px;
-  width: 835px;
-  height: 594px;
+  top: 300px; left: 322px;
+  //width: 835px;
+  //height: 594px;
 }
 
 mirror {

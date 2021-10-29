@@ -26,6 +26,10 @@
         changeImage();
       }, 10000);
 
+      function clearQR() {
+        image = document.getElementById('qr');
+        image.src = "";
+      }
 
       document.addEventListener('keydown', (event) => {  // take the selfie and send it to the server
         const keyName = event.key;
@@ -41,8 +45,9 @@
           xhr.onreadystatechange = function () {
               if (xhr.readyState === 4 && xhr.status === 200) {
                   var json = JSON.parse(xhr.responseText);
-                  img.src = "";
+                  img.src = json.qr;
                   console.log(json.qr);
+                  timeOutVar = setTimeout(clearQR, 7000);
               }
           };
 
@@ -77,7 +82,7 @@
         });
       </script>
 
-      <img id="qr" src="" />
+      <img id="qr" class="qr" src="" />
       <img id="imgDisp" class="rinyones" src="videos/00_00_2015_01_30_ecorenal_vesi.gif" />
 
     </main>
