@@ -1,30 +1,51 @@
 from flask import Flask
 from flask import request
+import os
 
-import base64
-from PIL import Image, ImageOps
-from io import BytesIO
+from PIL import ImageGrab
 
-import socket
+from datetime import datetime
+from hashlib import md5
 
-def convert_and_save(b64_string):
-    imgdata = base64.b64decode(b64_string)
-    # im = ImageOps.grayscale(Image.open(BytesIO(imgdata)))
-    im = Image.open(BytesIO(imgdata))
-    im.save('image.png', 'PNG')
+def upload_file(file_name):
+    import subprocess
+    try:
+        scp = subprocess.Popen(['scp', file_name, 'dh_ep9wdy@selfie-v2.fransimo.info:/home/dh_ep9wdy/selfie-v2.fransimo.info/public/snap_shots/'])
+        sts = os.waitpid(scp.pid, 0)
+        return True
+    except CalledProcessError:
+        print('ERROR: Connection to host failed!')
+        return False
 
+def take_snap_shot():
+    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    print(now)
+    m = md5(now.encode())
+    file_name = 'snap_shots/' + m.hexdigest() + '.jpg'
+    print(file_name)
+    img = ImageGrab.grab().convert('RGB')
+    img.save(file_name)
+    return file_name
+
+def take_snap_shot_and_upload():
+    file_name = take_snap_shot()
+    if upload_file(file_name):
+        r = 'https://www.selfie-v2.fransimo.info/'+file_name
+    else:
+        r = "not online, sorry!"
+    return r
 
 app = Flask(__name__, static_url_path='/static')
 
 @app.route("/hello")
 def hello_world():
+    import socket
     return "<p>Hello, World!</p><p>I'm " + socket.gethostname() + "!</p>"
 
-@app.route('/upload', methods=['GET', 'POST'])
-def upload_file():
+@app.route('/takeSnapShot', methods=['GET', 'POST'])
+def take_snap_shot_uri():
     if request.method == 'POST':
-        json_data = request.get_json()
-        convert_and_save(json_data['selfie'])
-        return "Was post"
+        r = take_snap_shot_and_upload()
+        return { "qr": r }
     else:
         return "Not post"
