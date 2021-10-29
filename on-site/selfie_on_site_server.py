@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import request
 import os
+import subprocess
 
 from PIL import ImageGrab
 
@@ -8,11 +9,11 @@ from datetime import datetime
 from hashlib import md5
 
 def upload_file(file_name):
-    import subprocess
     try:
         scp = subprocess.Popen(['scp', file_name, 'dh_ep9wdy@selfie-v2.fransimo.info:/home/dh_ep9wdy/selfie-v2.fransimo.info/public/snap_shots/'])
-        sts = os.waitpid(scp.pid, 0)
-        return True
+        pid, status = os.waitpid(scp.pid, 0)
+        print(status)
+        return ( status == 0 )
     except CalledProcessError:
         print('ERROR: Connection to host failed!')
         return False
