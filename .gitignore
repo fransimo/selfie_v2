@@ -1,7 +1,7 @@
 # testing image
 on-site/image.png
 on-site/snap_shots/*.jpg
-
+on-site/static/snap_shots/*.png
 
 # Joe's backups
 *~
