@@ -23,7 +23,7 @@ def take_snap_shot():
 
 def upload_file(file_name):
     try:
-        scp = subprocess.Popen(['scp', file_name, 'dh_ep9wdy@selfie-v2.fransimo.info:/home/dh_ep9wdy/selfie-v2.fransimo.info/public/snap_shots/'])
+        scp = subprocess.Popen(['scp', file_name, 'dh_ep9wdy@selfie-v2.fransimo.info:/home/dh_ep9wdy/selfie_v2/public/snap_shots'])
         pid, status = os.waitpid(scp.pid, 0)
         print(status)
         return ( status == 0 )
