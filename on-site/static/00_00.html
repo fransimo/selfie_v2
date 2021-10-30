@@ -4,8 +4,6 @@
     <meta charset="utf-8">
     <title>0.0</title>
     <link href="1080_1920.css" rel="stylesheet">
-    <script src="/static/js/html2canvas.min.js">
-    </script>
 
     <script>
       var timeOutVar;
@@ -27,16 +25,32 @@
       }, 10000);
 
       function clearQR() {
-        image = document.getElementById('qr');
-        image.src = "";
+        const img = document.getElementById("qr");
+        const t = document.getElementById("qr_text");
+        img.src = "";
+        t.innerHTML = "";
+      }
+
+      function setUploadMessage() {
+        const img = document.getElementById("qr");
+        const t = document.getElementById("qr_text");
+        const time_text = document.getElementById("clock");
+
+        time_text.innerHTML = "";
+        img.src = "images/upload-icon-30.png";
+        t.innerHTML = "Uploading! Prepare your phone to read the QR";
       }
 
       document.addEventListener('keydown', (event) => {  // take the selfie and send it to the server
         const keyName = event.key;
 
         if (keyName === 'Enter') {
-
           const img = document.getElementById("qr");
+          const t = document.getElementById("qr_text");
+          const time_text = document.getElementById("clock");
+          const date_now = new Date()
+          time_text.innerHTML = date_now.toLocaleString('es-ES');
+
           const url = "/takeSnapShot";
           var xhr = new XMLHttpRequest();
 
@@ -45,13 +59,22 @@
           xhr.onreadystatechange = function () {
               if (xhr.readyState === 4 && xhr.status === 200) {
                   var json = JSON.parse(xhr.responseText);
-                  img.src = json.qr;
                   console.log(json.qr);
+                  if (json.qr === "not online, sorry!") {
+                    img.src = "";
+                    t.innerHTML = "I'm sorry, I'm offline.<br />:(";
+                  } else {
+                    img.src = json.qr;
+                    t.innerHTML = "Scan me!";
+                  }
+
                   timeOutVar = setTimeout(clearQR, 7000);
               }
           };
 
           xhr.send();
+
+          setTimeout(setUploadMessage, 500);
 
           return;
         }
@@ -78,8 +101,14 @@
           video.srcObject = stream;
         });
       </script>
+      <time class="clock">
+        <p id="clock"></p>
+      </time>
+      <qr class="qr">
+        <p id="qr_text"></p>
+        <img id="qr"  src="" />
+      </qr>
 
-      <img id="qr" class="qr" src="" />
       <img id="imgDisp" class="rinyones" src="videos/00_00_2015_01_30_ecorenal_vesi.gif" />
 
     </main>

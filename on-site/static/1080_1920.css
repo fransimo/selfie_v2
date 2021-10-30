@@ -27,8 +27,21 @@ main {
 .qr {
   position: absolute;
   top: 300px; left: 322px;
-  //width: 835px;
-  //height: 594px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #bb1f1f;
+  text-align: center;
+  font-size: 40px;
+  width: 450px;
+}
+
+.clock {
+  position: absolute;
+  top: 10px; left: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #bb1f1f;
+  text-align: right;
+  font-size: 20px;
+  width: 1060px;
 }
 
 mirror {
