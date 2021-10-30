@@ -6,6 +6,6 @@
     <link href="style.css" rel="stylesheet">
   </head>
   <body>
-    <img src="<?php echo $_GET["id"]) ?>" />
+    <img src="<?php echo $_GET["id"]; ?>" />
   </body>
 </html>
