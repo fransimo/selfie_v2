@@ -32,7 +32,7 @@ def upload_file(file_name):
         return False
 
 def generate_qr(file_name):
-    url = 'https://www.selfie-v2.fransimo.info/'+file_name
+    url = 'https://www.selfie-v2.fransimo.info/get_selfie.php?id='+file_name
     img = qrcode.make(url)
     qr_uri = 'static/' + file_name + '.png'
     img.save(qr_uri)
