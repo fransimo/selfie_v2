@@ -58,6 +58,10 @@ main a{
   color: red;
 }
 
+main form {
+  width: 98%;
+}
+
 .button {
   background-color: red;
   border: none;
@@ -69,6 +73,9 @@ main a{
 
   cursor: pointer;
   width: 98%;
+
+  padding-bottom: 5px;
+  margin: 10px;
 }
 
 @media screen and (max-width: 600px) {
