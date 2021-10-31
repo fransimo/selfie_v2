@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
+
 html {
   background: #000;
 
@@ -19,7 +21,7 @@ main {
   padding: 5px;
   margin: auto;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inconsolata', monospace;
   color: black;
   text-align: left;
   font-size: 16px;
