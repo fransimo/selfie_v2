@@ -16,7 +16,7 @@
           <label for="archive">Acepto formar parte del archivo.</label><br>
         <input type="submit" value="Guradar mis datos y descargar.">
       </form>
-      <a download="selfie_v2.jpg" href="<?php echo $_GET["id"]; ?>" title="Selfie_v2">
+      <a download="selfie_v2.jpg" target="_blank" href="<?php echo $_GET["id"]; ?>" title="Selfie_v2">
         <p>¡Solo descargar!</p>
         <img alt="Selfie_v2" src="<?php echo $_GET["id"]; ?>">
       </a>
