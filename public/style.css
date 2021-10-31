@@ -6,20 +6,33 @@ body, html {
   background-image: url("images/2020_11_23_columna1_16_9_vertical.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+
+  margin: 5;
+  padding: 5;
 }
 
 main {
-
   background: #FFF;
   opacity: 0.9;
-  padding: 10px;
+  padding: 5px;
 
   margin: auto;
 
   font-family: Arial, Helvetica, sans-serif;
   color: black;
-  text-align: justify;
-  font-size: 30px;
+  text-align: left;
+  font-size: 16px;
+}
+
+main h1, h2, p {
+  padding: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    font-size: 30px;
+    margin: 10px;
+  }
 }
 
 .center-me {
