@@ -4,12 +4,14 @@
   $archive=$_GET["archive"];
   $file=$_GET["file"];
 
-  $arch_file=str_replace('snap_shots','archive',$file);
-  copy($file, $arch_file);
-  $arch_meta  = fopen($arch_file . '.dat', "w");
-  $txt = $name . "\n" . $email . "\n" . $archive . "\n" . $file;
-  fwrite($arch_meta, $txt);
-  fclose($arch_meta);
+  if ($archive == "archive") {
+    $arch_file=str_replace('snap_shots','archive',$file);
+    copy($file, $arch_file);
+    $arch_meta  = fopen($arch_file . '.dat', "w");
+    $txt = $name . "\n" . $email . "\n" . $archive . "\n" . $file;
+    fwrite($arch_meta, $txt);
+    fclose($arch_meta);
+  }
 ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
