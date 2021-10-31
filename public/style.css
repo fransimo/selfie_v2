@@ -49,9 +49,10 @@ main img {
   height: auto;
 }
 
-main a{
+main a, a.p{
   color: red;
 }
+
 @media screen and (max-width: 600px) {
   main {
     font-size: 24px;
