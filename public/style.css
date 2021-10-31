@@ -45,7 +45,7 @@ main p {
   line-height: 120%;
 }
 
-main a img {
+main p img {
   width: 98%;
   max-width: 1080px;
   height: auto;
