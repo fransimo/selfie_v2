@@ -79,6 +79,19 @@
           return;
         }
 
+        if (keyName === 'q') {
+          const url = "/shutdown";
+          var xhr = new XMLHttpRequest();
+
+          xhr.open("POST", url, true);
+          xhr.send();
+
+          const t = document.getElementById("qr_text");
+          t.innerHTML = "Shutdown in progress...";
+          timeOutVar = setTimeout(clearQR, 7000);
+
+        }
+
       }, false);
 
   </script>

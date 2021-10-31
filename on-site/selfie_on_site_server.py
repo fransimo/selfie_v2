@@ -50,11 +50,6 @@ def take_snap_shot_and_upload():
 
 app = Flask(__name__, static_url_path='/static')
 
-@app.route("/hello")
-def hello_world():
-    import socket
-    return "<p>Hello, World!</p><p>I'm " + socket.gethostname() + "!</p>"
-
 @app.route('/takeSnapShot', methods=['GET', 'POST'])
 def take_snap_shot_uri():
     if request.method == 'POST':
@@ -62,3 +57,12 @@ def take_snap_shot_uri():
         return { "qr": r }
     else:
         return "Not post"
+
+@app.route("/hello")
+def hello_world():
+    import socket
+    return "<p>Hello, World!</p><p>I'm " + socket.gethostname() + "!</p>"
+
+@app.route("/shutdown",methods=['POST'])
+def shutdown_uri():
+    shutdown = subprocess.Popen(['/home/pi/selfie_v2/shutdown.sh'])
