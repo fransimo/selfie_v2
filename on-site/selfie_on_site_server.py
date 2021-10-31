@@ -17,7 +17,7 @@ def take_snap_shot():
     file_name = 'snap_shots/' + m.hexdigest() + '.jpg'
     print(file_name)
     img = ImageGrab.grab().convert('RGB')
-    img.save(file_name)
+    img.save(file_name,quality=90)
     return file_name
 
 
