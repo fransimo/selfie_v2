@@ -9,6 +9,7 @@
   <body>
     <main>
       <p>Puedes descargar la imagen sin más, pero si quieres participar en el archivo, por favor rellena los datos.</p>
+
       <form action="register.php">
         <label for="name">Nombre:</label><input type="text" id="name" name="name"><br />
         <label for="email">email:</label><input type="email" id="email" name="email"><br />
