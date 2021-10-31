@@ -1,18 +1,21 @@
-body, html {
+html {
   background: #000;
 
   background-image: url("images/2020_11_23_columna1_16_9_vertical.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
 
+body{
   margin: 5;
   padding: 5;
+  margin: 10px;
 }
 
 main {
   display: block;
   background: #FFF;
-  opacity: 0.9;
+  opacity: 0.8;
   padding: 5px;
   margin: auto;
 
@@ -22,9 +25,21 @@ main {
   font-size: 16px;
 }
 
-main h1, h2, p, li {
-  padding: 5px;
+
+
+main h1, h2, p {
+  padding-bottom: 5px;
+  margin: 10px;
 }
+
+main h1, h2 {
+  margin-top: 15px;
+}
+
+main li {
+  padding-bottom: 7px;
+}
+
 main a{
   color: red;
 }
