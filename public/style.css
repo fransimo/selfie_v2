@@ -82,6 +82,10 @@ main a{
     font-size: 24px;
     margin: 10px;
   }
+  .button {
+    font-size: 24px;
+    margin: 10px;
+  }
 }
 
 .center-me {
