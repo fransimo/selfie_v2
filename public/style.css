@@ -1,6 +1,4 @@
 body, html {
-  height: 100%;
-  display: grid;
   background: #000;
 
   background-image: url("images/2020_11_23_columna1_16_9_vertical.jpg");
@@ -12,10 +10,10 @@ body, html {
 }
 
 main {
+  display: block;
   background: #FFF;
   opacity: 0.9;
   padding: 5px;
-
   margin: auto;
 
   font-family: Arial, Helvetica, sans-serif;
@@ -30,7 +28,7 @@ main h1, h2, p {
 
 @media screen and (max-width: 600px) {
   main {
-    font-size: 30px;
+    font-size: 24px;
     margin: 10px;
   }
 }
