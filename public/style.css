@@ -75,6 +75,7 @@ main a{
   width: 100%;
 
   font-family: 'Inconsolata', monospace;
+  white-space: normal;
 }
 
 @media screen and (max-width: 600px) {
