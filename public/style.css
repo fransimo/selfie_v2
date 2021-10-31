@@ -45,8 +45,13 @@ main p {
 }
 
 main a img {
-  width: 100%;
+  width: 98%;
+  max-width: 1080px;
   height: auto;
+}
+
+main a p {
+  text-align: center;
 }
 
 main a{
