@@ -44,12 +44,12 @@ main p {
   line-height: 120%;
 }
 
-main img {
+main a img {
   width: 100%
   height: auto;
 }
 
-main a, a.p{
+main a{
   color: red;
 }
 
