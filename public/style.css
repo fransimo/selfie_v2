@@ -59,15 +59,16 @@ main a{
 }
 
 .button {
-  background-color: #red;
+  background-color: red;
   border: none;
   color: white;
-  padding: 10px 10px;
+
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  margin: 4px 2px;
+
   cursor: pointer;
+  width: 98%;
 }
 
 @media screen and (max-width: 600px) {
