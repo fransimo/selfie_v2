@@ -19,7 +19,9 @@
         <input type="submit" class="button" value="Guradar mis datos y descargar.">
       </form>
 
-      <p><a class="button" download="selfie_v2.jpg" target="_blank" href="<?php echo $_GET["id"]; ?>" title="Selfie_v2">¡Solo descargar!</a></p>
+      <form action="<?php echo $_GET["id"]; ?>">
+        <input type="submit" class="button" value="¡Solo descargar!">
+      </form>
 
       <p><a download="selfie_v2.jpg" target="_blank" href="<?php echo $_GET["id"]; ?>" title="Selfie_v2">
         <img alt="Selfie_v2" src="<?php echo $_GET["id"]; ?>">
