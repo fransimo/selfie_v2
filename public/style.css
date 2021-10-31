@@ -14,7 +14,7 @@ body{
   margin: 10px;
 }
 
-main {
+main, form {
   display: block;
   background: #FFF;
   opacity: 0.8;
@@ -56,10 +56,6 @@ main a p {
 
 main a{
   color: red;
-}
-
-main form- {
-  width: 98%;
 }
 
 .button {
