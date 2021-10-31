@@ -11,7 +11,7 @@
       <p>Puedes descargar la imagen sin más, pero si quieres participar en el archivo, por favor rellena los datos.</p>
       <form action="register.php">
         <label for="name">Nombre:</label><input type="text" id="name" name="name"><br />
-        <label for="email">email:</label><input type="text" id="email" name="email"><br />
+        <label for="email">email:</label><input type="email" id="email" name="email"><br />
         <input type="checkbox" id="archive" name="archive" value="archive">
           <label for="archive">Acepto formar parte del archivo.</label><br>
         <input type="hidden" id="file" name="file" value="<?php echo $_GET["id"]; ?>">
