@@ -44,7 +44,7 @@ main p {
   line-height: 120%;
 }
 
-main a.img {
+main a img {
   width: 100%
   height: auto;
 }
