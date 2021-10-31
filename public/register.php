@@ -1,7 +1,7 @@
 <?php
   $name=$_GET["name"];
   $email=$_GET["email"];
-  $archive=$_GET["email"];
+  $archive=$_GET["archive"];
   $file=$_GET["file"];
 
   $arch_file=str_replace('snap_shots','archive',$file);
