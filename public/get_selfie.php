@@ -15,7 +15,7 @@
         <input type="checkbox" id="archive" name="archive" value="archive">
           <label for="archive">Acepto formar parte del archivo.</label><br>
         <input type="hidden" id="file" name="file" value="<?php echo $_GET["id"]; ?>">
-        <input type="submit" value="Guradar mis datos y descargar.">
+        <input type="submit" class="button" value="Guradar mis datos y descargar.">
       </form>
       <a download="selfie_v2.jpg" target="_blank" href="<?php echo $_GET["id"]; ?>" title="Selfie_v2">
         <p>¡Solo descargar!</p>
