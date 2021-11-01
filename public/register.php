@@ -3,6 +3,7 @@
   $email=$_GET["email"];
   $archive=$_GET["archive"];
   $file=$_GET["file"];
+  $thanks_txt='Oh! :(... no has aceptado registrarte, pero te llevamos a la imagen de todas formas :) ';
 
   if ($archive == "archive") {
     $arch_file=str_replace('snap_shots','archive',$file);
@@ -11,6 +12,7 @@
     $txt = $name . "\n" . $email . "\n" . $archive . "\n" . $file;
     fwrite($arch_meta, $txt);
     fclose($arch_meta);
+    $thanks_txt='Gracias por registrarte.';
   }
 ?>
 <!DOCTYPE html>
@@ -24,7 +26,7 @@
   </head>
   <body>
     <main>
-      <p>Gracias por registrarte.</p>
+      <p><?php echo $thanks_txt;?></p>
     </main>
   </body>
 </html>
