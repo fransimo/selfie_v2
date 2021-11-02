@@ -14,7 +14,7 @@
 
         foreach($fileList as $filename){
            //Simply print them out onto the screen.
-           echo $filename, '<br>';
+           echo '<p><img alt="Selfie_v2" src="'.$filename.'"></p>';
         }
       ?>
     </main>
