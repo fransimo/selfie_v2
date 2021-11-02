@@ -9,7 +9,8 @@
   <body>
     <main>
       <h1>Archivo #Selfie_v2</h1>
-      <ul>Las personas que decidan participar en el archivo aceptan que el autor:</ul>
+      <p>Las personas que decidan participar en el archivo aceptan que el autor:</p>
+      <ul>
          <li>Publique las imágenes en esta web solo durante la exposición en ideoGrama.</li>
          <li>Contactar por email para enviar noticias sobre su obra.</li>
          <li>En caso de nuevos usuos siempre se pedirá permiso explicito.</li>
