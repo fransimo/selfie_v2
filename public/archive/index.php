@@ -10,7 +10,8 @@
     <main>
       <p>Text</p>
       <?php
-        $fileList = glob('test/*.jpg');
+        $fileList = glob('*.jpg');
+
         foreach($fileList as $filename){
            //Simply print them out onto the screen.
            echo $filename, '<br>';
