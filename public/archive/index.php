@@ -23,7 +23,7 @@
            echo '
               <p>
                   <img alt="Selfie_v2" src="'.$filename.'"/><br />
-                  <a href="delete.php?'.$filename.'"
+                  <a href="delete.php?'.$filename.'">Quiero borrar esta imagen.</a>
               </p>';
         }
       ?>
