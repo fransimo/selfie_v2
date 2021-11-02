@@ -20,7 +20,11 @@
         $fileList = glob('*.jpg');
 
         foreach($fileList as $filename){
-           echo '<p><img alt="Selfie_v2" src="'.$filename.'"></p>';
+           echo '
+              <p>
+                  <img alt="Selfie_v2" src="'.$filename.'"/><br />
+                  <a href="delete.php?'.$filename.'"
+              </p>';
         }
       ?>
     </main>
