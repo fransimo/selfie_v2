@@ -12,7 +12,7 @@
     $txt = $name . "\n" . $email . "\n" . $archive . "\n" . $file;
     fwrite($arch_meta, $txt);
     fclose($arch_meta);
-    $thanks_txt='Gracias por registrarte.';
+    $thanks_txt='Gracias por registrarte. En unos segundos podrás descargar la imágen.';
   }
 ?>
 <!DOCTYPE html>
