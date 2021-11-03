@@ -23,9 +23,10 @@
         $email=$_GET["email"];
         $lines = file($file);
         if ($email == trim($lines[1])) {
-          echo "email coincide";
+          echo "<p>Imagen borrada<p>";
+          rename($file, $file.".deleted")
         } else {
-          echo "email NO coincide";
+          echo "<p>El email NO coincide. La imágen no se borará.</p>";
         }
 
       ?>
