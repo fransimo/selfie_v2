@@ -27,7 +27,12 @@
           echo "<p>Imagen borrada.<p>";
           rename($image, $image.".deleted");
         } else {
-          echo "<p>El email NO coincide. La imágen no se borará.</p>";
+          echo '<p>El email NO coincide. La imágen no se borará.</p>
+                <p>
+                <a href = "mailto:contact@fransimo.info?subject = Borrar imagen '.$image.'&body = He tenido un problema al querrer borrar la imagen'.$image.'">
+                Send Feedback
+                </a></p>
+          ';
         }
 
       ?>
