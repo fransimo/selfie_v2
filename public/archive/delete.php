@@ -22,7 +22,7 @@
         $file=$_GET["file"].'.dat';
         $email=$_GET["email"];
         $lines = file($file);
-        if ($email == $lines[1]) {
+        if ($email == trim($lines[1])) {
           echo "email coincide";
         } else {
           echo "email NO coincide";
