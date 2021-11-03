@@ -13,7 +13,7 @@
       <ul>
          <li>Publique las imágenes en esta web solo durante la exposición en ideoGrama.</li>
          <li>Contactar por email para enviar noticias sobre su obra.</li>
-         <li>En caso de nuevos usuos siempre se pedirá permiso explicito.</li>
+         <li>En caso de nuevos usos, siempre se pedirá permiso explícito.</li>
       </ul>
 
       <?php
