@@ -19,6 +19,11 @@
       <?php
         $fileList = glob('*.jpg');
 
+        // sort files by last modified date
+        usort($fileList, function($x, $y) {
+            return filemtime($x) < filemtime($y);
+        });
+
         foreach($fileList as $filename){
            echo '
               <p>
