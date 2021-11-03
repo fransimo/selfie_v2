@@ -8,7 +8,8 @@
   </head>
   <body>
     <main>
-      <p>Puedes descargar la imagen sin más, pero si quieres participar en el archivo, por favor rellena los datos.</p>
+      <p>Puedes descargar la imagen sin más,
+        pero si quieres participar en el <a href="archive/">archivo</a>, por favor rellena los datos.</p>
 
       <form action="register.php">
         <label for="name">Nombre:</label><input type="text" id="name" name="name"><br />

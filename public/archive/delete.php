@@ -9,7 +9,7 @@
   <body>
     <main>
       <?php if( ! $_GET["email"] ) : ?>
-      <p>Por favor confirma tu dirección de email.</p>
+      <p>Por favor, confirma tu dirección de email.</p>
       <form action="delete.php">
         <label for="email">email:</label><input type="email" id="email" name="email"><br />
 
