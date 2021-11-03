@@ -29,7 +29,7 @@
         } else {
           echo '<p>El email NO coincide. La imágen no se borará.</p>
                 <p>
-                <a href = "mailto:contact@fransimo.info?subject = Borrar imagen '.$image.'&body = He tenido un problema al querrer borrar la imagen'.$image.'">
+                <a href = "mailto:contact@fransimo.info?subject=Borrar imagen '.$image.'">
                 Enviar correo al autor.
                 </a></p>
           ';
