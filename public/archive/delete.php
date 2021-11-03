@@ -19,12 +19,13 @@
       </form>
       <?php  else: ?>
       <?php
+        $image=$_GET["file"];
         $file=$_GET["file"].'.dat';
         $email=$_GET["email"];
         $lines = file($file);
         if ($email == trim($lines[1])) {
           echo "<p>Imagen borrada.<p>";
-          rename($file, $file.".deleted");
+          rename($image, $image.".deleted");
         } else {
           echo "<p>El email NO coincide. La imágen no se borará.</p>";
         }
