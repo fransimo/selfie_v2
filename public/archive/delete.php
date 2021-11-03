@@ -8,11 +8,20 @@
   </head>
   <body>
     <main>
-      <p>Disponible pronto. Disculpad las molestias.</p>
+      <?php if( ! $_GET["email"] ) : ?>
+      <p>Por favor confirma tu dirección de email.</p>
+      <form action="delete.php">
+        <label for="email">email:</label><input type="email" id="email" name="email"><br />
+
+        <input type="hidden" id="file" name="file" value="<?php echo $_GET["file"]; ?>">
+        <br />
+        <input type="submit" class="button" value="Guradar mis datos y descargar.">
+      </form>
+      <?php  else: ?>
       <?php
-        //Mostrar formulario si no viene el email informado.
-        //Si coinciden borrar la imagen y redirigie al archivo.
+        echo "había email";
       ?>
+      <?php endif?>
     </main>
   </body>
 </html>
