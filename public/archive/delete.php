@@ -19,7 +19,7 @@
       </form>
       <?php  else: ?>
       <?php
-        $file=$_GET["file"];
+        $file=$_GET["file"].'.dat';
         $email=$_GET["email"];
         $lines = file($file);
         if ($email == $lines[1]) {
