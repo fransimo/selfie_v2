@@ -15,11 +15,19 @@
 
         <input type="hidden" id="file" name="file" value="<?php echo $_GET["file"]; ?>">
         <br />
-        <input type="submit" class="button" value="Guradar mis datos y descargar.">
+        <input type="submit" class="button" value="Borrar imágen.">
       </form>
       <?php  else: ?>
       <?php
-        echo "había email";
+        $file=$_GET["file"];
+        $email=$_GET["email"];
+        $lines = file($file);
+        if ($email == $lines[1]) {
+          echo "email coincide";
+        } else {
+          echo "email NO coincide";
+        }
+
       ?>
       <?php endif?>
     </main>
