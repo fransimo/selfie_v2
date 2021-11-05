@@ -4,6 +4,6 @@ Options +FollowSymLinks +ExecCGI
 
 RewriteEngine On
 RewriteCond %{REQUEST_URI}  (\.dat)$
-RewriteRule (.*)  / [QSA]
+RewriteRule (.*) /archive/ [QSA]
 
 </IfModule>
